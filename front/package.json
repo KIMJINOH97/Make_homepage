@@ -1,0 +1,30 @@
+{
+    "name": "front_",
+    "version": "1.0.0",
+    "description": "Homepage",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "next",
+        "build": "next build",
+        "start": "next start"
+    },
+    "author": "kimjinoh",
+    "license": "ISC",
+    "dependencies": {
+        "antd": "^4.6.1",
+        "next": "^9.5.2",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "styled-components": "^5.2.0"
+    },
+    "devDependencies": {
+        "babel-eslint": "^10.1.0",
+        "eslint": "^7.7.0",
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-plugin-react": "^7.20.6",
+        "eslint-plugin-react-hooks": "^4.1.0",
+        "nodemon": "^2.0.4",
+        "webpack": "^4.44.1"
+    }
+}
