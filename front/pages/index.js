@@ -1,8 +1,15 @@
 import React from 'react';
-import { Button, Menu } from 'antd';
+import { Calendar, Col } from 'antd';
 
 const Home = () => {
-    return <></>;
+    return (
+        <>
+            <Col>
+                <Calendar></Calendar>
+            </Col>
+            <Col></Col>
+        </>
+    );
 };
 
 export default Home;

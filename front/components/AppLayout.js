@@ -1,7 +1,7 @@
 import React from 'react';
 import { Menu, Row, Col } from 'antd';
 import styled from 'styled-components';
-import { GithubOutlined, HomeOutlined, BookOutlined } from '@ant-design/icons';
+import { GithubOutlined, HomeOutlined, BookOutlined, RobotOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 
 const AppLayout = ({ children }) => {
@@ -11,10 +11,15 @@ const AppLayout = ({ children }) => {
     return (
         <>
             <Row>
-                <Menu style={{ fontWeight: 'bold', width: 320 }} mode="horizontal">
+                <Menu style={{ fontWeight: 'bold', width: 500 }} mode="horizontal">
                     <Menu.Item key="home" icon={<HomeOutlined />}>
                         <Link href="/">
                             <a>Home</a>
+                        </Link>
+                    </Menu.Item>
+                    <Menu.Item key="portfolio" icon={<RobotOutlined />}>
+                        <Link href="/portfolio">
+                            <a>portfolio</a>
                         </Link>
                     </Menu.Item>
                     <Menu.Item key="github" icon={<GithubOutlined />}>
@@ -29,11 +34,8 @@ const AppLayout = ({ children }) => {
                     </Menu.Item>
                 </Menu>
             </Row>
-            <Row>
-                <Col></Col>
-            </Row>
+            <Row>{children}</Row>
             <StyledButton> hi </StyledButton>
-            {children}
         </>
     );
 };
