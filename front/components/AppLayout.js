@@ -10,7 +10,7 @@ const AppLayout = ({ children }) => {
 
     return (
         <>
-            <Row>
+            <Row gutter={[10, 10]}>
                 <Menu style={{ fontWeight: 'bold', width: 500 }} mode="horizontal">
                     <Menu.Item key="home" icon={<HomeOutlined />}>
                         <Link href="/">
@@ -34,8 +34,12 @@ const AppLayout = ({ children }) => {
                     </Menu.Item>
                 </Menu>
             </Row>
-            <Row>{children}</Row>
-            <StyledButton> hi </StyledButton>
+            {children}
+            <StyledButton>
+                <Abc>hi</Abc>
+                <Abc>hi</Abc>
+                <Abc>hi</Abc>
+            </StyledButton>
         </>
     );
 };
@@ -43,9 +47,16 @@ const AppLayout = ({ children }) => {
 export default AppLayout;
 
 // 이런식으로 적용
-const StyledButton = styled.button`
+// justify-content : 정렬 방법
+const StyledButton = styled.div`
+    display: flex;
+    justify-content: space-around;
+`;
+
+const Abc = styled.button`
     font-weight: bold;
     font-size: 1rem;
     color: red;
+    display: flex;
 `;
 // 무조건 첫문자 대문자임
